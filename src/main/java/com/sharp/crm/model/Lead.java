@@ -1,5 +1,7 @@
 package com.sharp.crm.model;
 
+import java.util.Date;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="leads")
@@ -7,6 +9,8 @@ public class Lead {
     
     
     private String id;
+    
+    private String leadStatus;
     
     private String firstName;
     
@@ -50,6 +54,10 @@ public class Lead {
     private String revenueSize;
     
     private String customDataRequirement;
+    
+    private Date createdTimeStamp;
+    
+    private Date lastUpdatedTimeStamp;
 
     public String getId() {
         return id;
@@ -225,6 +233,30 @@ public class Lead {
 
     public void setCustomDataRequirement(String customDataRequirement) {
         this.customDataRequirement = customDataRequirement;
+    }
+
+    public String getLeadStatus() {
+        return leadStatus;
+    }
+
+    public void setLeadStatus(String leadStatus) {
+        this.leadStatus = leadStatus;
+    }
+
+    public Date getCreatedTimeStamp() {
+        return createdTimeStamp;
+    }
+
+    public void setCreatedTimeStamp(Date createdTimeStamp) {
+        this.createdTimeStamp = createdTimeStamp;
+    }
+
+    public Date getLastUpdatedTimeStamp() {
+        return lastUpdatedTimeStamp;
+    }
+
+    public void setLastUpdatedTimeStamp(Date lastUpdatedTimeStamp) {
+        this.lastUpdatedTimeStamp = lastUpdatedTimeStamp;
     }
    
 }
