@@ -18,7 +18,26 @@ public class Lead {
     
     private String state;
     
+    private String city;
+
+    
     private String businessEmail;
+    
+    private String companyEmail;
+    
+    private String companySocialId;
+    
+    private String companyURL;
+    
+    private String alternateEmail;
+    
+    private String leadSource;
+    
+    private String phoneNumber;
+    
+    private String companyPhoneNumber;
+    
+    private String mobileNumber;
     
     private String sicCode;
     
@@ -30,8 +49,8 @@ public class Lead {
     
     private String revenueSize;
     
-    private StringBuffer customDataRequirement;
-    
+    private String customDataRequirement;
+
     public String getId() {
         return id;
     }
@@ -80,12 +99,84 @@ public class Lead {
         this.state = state;
     }
 
-    public String getBussinessEmail() {
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getBusinessEmail() {
         return businessEmail;
     }
 
-    public void setBussinessEmail(String bussinessEmail) {
-        this.businessEmail = bussinessEmail;
+    public void setBusinessEmail(String businessEmail) {
+        this.businessEmail = businessEmail;
+    }
+
+    public String getCompanyEmail() {
+        return companyEmail;
+    }
+
+    public void setCompanyEmail(String companyEmail) {
+        this.companyEmail = companyEmail;
+    }
+
+    public String getCompanySocialId() {
+        return companySocialId;
+    }
+
+    public void setCompanySocialId(String companySocialId) {
+        this.companySocialId = companySocialId;
+    }
+
+    public String getCompanyURL() {
+        return companyURL;
+    }
+
+    public void setCompanyURL(String companyURL) {
+        this.companyURL = companyURL;
+    }
+
+    public String getAlternateEmail() {
+        return alternateEmail;
+    }
+
+    public void setAlternateEmail(String alternateEmail) {
+        this.alternateEmail = alternateEmail;
+    }
+
+    public String getLeadSource() {
+        return leadSource;
+    }
+
+    public void setLeadSource(String leadSource) {
+        this.leadSource = leadSource;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getCompanyPhoneNumber() {
+        return companyPhoneNumber;
+    }
+
+    public void setCompanyPhoneNumber(String companyPhoneNumber) {
+        this.companyPhoneNumber = companyPhoneNumber;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
     }
 
     public String getSicCode() {
@@ -128,14 +219,13 @@ public class Lead {
         this.revenueSize = revenueSize;
     }
 
-    public StringBuffer getCustomDataRequirement() {
+    public String getCustomDataRequirement() {
         return customDataRequirement;
     }
 
-    public void setCustomDataRequirement(StringBuffer customDataRequirement) {
+    public void setCustomDataRequirement(String customDataRequirement) {
         this.customDataRequirement = customDataRequirement;
     }
-
    
 }
 
