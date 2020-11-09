@@ -20,7 +20,7 @@ public class Lead {
     
     private String country;
     
-    private String state;
+    private String state;   
     
     private String city;
 
