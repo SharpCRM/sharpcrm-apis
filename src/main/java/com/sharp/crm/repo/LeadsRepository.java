@@ -2,11 +2,14 @@ package com.sharp.crm.repo;
 
 import java.util.List;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import com.sharp.crm.model.Lead;
 
-public interface LeadsRepository extends MongoRepository<Lead,String>{
+
+@Repository
+public interface LeadsRepository extends CrudRepository<Lead, Integer> {
     
     List<Lead> getAllLeads();
     

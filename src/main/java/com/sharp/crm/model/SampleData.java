@@ -12,8 +12,7 @@ public class SampleData {
     
     private String dataType;
     
-    private String 
-
+  
     private Date lastUpdatedTimeStamp;
     
     private Date createdTimeStamp;

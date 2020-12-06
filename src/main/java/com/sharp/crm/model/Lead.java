@@ -2,12 +2,16 @@ package com.sharp.crm.model;
 
 import java.util.Date;
 
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-@Document(collection="leads")
+
+@Entity
 public class Lead {
     
-    
+	@Id
+	@GeneratedValue
     private String id;
     
     private String leadStatus;
