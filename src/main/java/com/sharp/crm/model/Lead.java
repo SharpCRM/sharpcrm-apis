@@ -12,7 +12,7 @@ public class Lead {
     
 	@Id
 	@GeneratedValue
-    private String id;
+    private int id;
     
     private String leadStatus;
     
@@ -59,15 +59,15 @@ public class Lead {
     
     private String customDataRequirement;
     
-    private Date createdTimeStamp;
+    private String createdTimeStamp;
     
-    private Date lastUpdatedTimeStamp;
+    private String lastUpdatedTimeStamp;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -247,19 +247,19 @@ public class Lead {
         this.leadStatus = leadStatus;
     }
 
-    public Date getCreatedTimeStamp() {
+    public String getCreatedTimeStamp() {
         return createdTimeStamp;
     }
 
-    public void setCreatedTimeStamp(Date createdTimeStamp) {
+    public void setCreatedTimeStamp(String createdTimeStamp) {
         this.createdTimeStamp = createdTimeStamp;
     }
 
-    public Date getLastUpdatedTimeStamp() {
+    public String getLastUpdatedTimeStamp() {
         return lastUpdatedTimeStamp;
     }
 
-    public void setLastUpdatedTimeStamp(Date lastUpdatedTimeStamp) {
+    public void setLastUpdatedTimeStamp(String lastUpdatedTimeStamp) {
         this.lastUpdatedTimeStamp = lastUpdatedTimeStamp;
     }
    

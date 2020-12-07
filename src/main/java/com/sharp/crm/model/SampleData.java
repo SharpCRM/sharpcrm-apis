@@ -12,7 +12,13 @@ public class SampleData {
     
     private String dataType;
     
-  
+
+    private String sicCode;
+    
+    private String naicsCode;
+    
+    private String targetIndustry;
+
     private Date lastUpdatedTimeStamp;
     
     private Date createdTimeStamp;
@@ -67,6 +73,30 @@ public class SampleData {
 
     public void setCreatedTimeStamp(Date createdTimeStamp) {
         this.createdTimeStamp = createdTimeStamp;
+    }
+
+    public String getSicCode() {
+        return sicCode;
+    }
+
+    public void setSicCode(String sicCode) {
+        this.sicCode = sicCode;
+    }
+
+    public String getNaicsCode() {
+        return naicsCode;
+    }
+
+    public void setNaicsCode(String naicsCode) {
+        this.naicsCode = naicsCode;
+    }
+
+    public String getTargetIndustry() {
+        return targetIndustry;
+    }
+
+    public void setTargetIndustry(String targetIndustry) {
+        this.targetIndustry = targetIndustry;
     }
     
     

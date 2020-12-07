@@ -1,18 +1,9 @@
 package com.sharp.crm.repo;
 
-import java.util.List;
-
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.sharp.crm.model.Lead;
 
 
-@Repository
-public interface LeadsRepository extends CrudRepository<Lead, Integer> {
-    
-    List<Lead> getAllLeads();
-    
-    Lead addNewLead(Lead newLead);
-    
+public interface LeadsRepository extends JpaRepository<Lead, Integer> {
 }

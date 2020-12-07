@@ -1,4 +1,4 @@
-package com.sharp.exceptions;
+package com.sharp.crm.exceptions;
 
 import java.util.Date;
 
