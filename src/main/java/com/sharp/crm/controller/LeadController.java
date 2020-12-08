@@ -5,7 +5,6 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,12 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sharp.crm.model.Lead;
-import com.sharp.crm.model.TestId;
-import com.sharp.crm.repo.LeadsRepository;
 import com.sharp.crm.services.LeadService;
-
-
-
 
 //@CrossOrigin(origins = "http://localhost:3000")
 @RestController
@@ -40,9 +34,14 @@ public class LeadController {
         return leadService.saveLead(lead);
         
     }
-    @GetMapping("/leads") 
-    public List<Lead> getLeads(){
+    @GetMapping("/lead") 
+    public List<Lead> getAllLeads(){
         return leadService.getAllLeads();
+    }
+    
+    @GetMapping("/lead/{id}") 
+    public Lead getLead(@PathVariable int id){
+        return leadService.getLeadById(id);
     }
     
     @PutMapping("/update")
