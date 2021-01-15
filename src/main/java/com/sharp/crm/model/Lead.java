@@ -12,7 +12,11 @@ public class Lead {
     
 	@Id
 	@GeneratedValue
+<<<<<<< Updated upstream
     private int id;
+=======
+    private String id;
+>>>>>>> Stashed changes
     
     private String leadStatus;
     

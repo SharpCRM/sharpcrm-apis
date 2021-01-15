@@ -12,6 +12,7 @@ public class SampleData {
     
     private String dataType;
     
+<<<<<<< Updated upstream
 
     private String sicCode;
     
@@ -19,6 +20,9 @@ public class SampleData {
     
     private String targetIndustry;
 
+=======
+  
+>>>>>>> Stashed changes
     private Date lastUpdatedTimeStamp;
     
     private Date createdTimeStamp;
