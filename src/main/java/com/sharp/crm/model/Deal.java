@@ -3,89 +3,92 @@ package com.sharp.crm.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Deal {
-    
-    private String dealId;
-    
-    private String leadId;
-    
-    private String dealStatus;
-    
-    private List<String> sampleDataAttachmentFiles;
-    
 
-    private String finalDataFile;
-    
-    private Long dealValue;
-    
-    private Date lastUpdatedTimeStamp;
-    
-    public Date getLastUpdatedTimeStamp() {
-        return lastUpdatedTimeStamp;
-    }
+	@Id
+	@GeneratedValue
+	private int dealId;
 
-    public void setLastUpdatedTimeStamp(Date lastUpdatedTimeStamp) {
-        this.lastUpdatedTimeStamp = lastUpdatedTimeStamp;
-    }
+	private int leadId;
 
-    private Date createdTimeStamp;
+	private String dealStatus;
 
-    
-    
+	private String sampleDataAttachmentFiles;
 
-    public String getDealId() {
-        return dealId;
-    }
+	private String finalDataFile;
 
-    public void setDealId(String dealId) {
-        this.dealId = dealId;
-    }
+	private Long dealValue;
 
-    public String getLeadId() {
-        return leadId;
-    }
+	private String lastUpdatedTimeStamp;
 
-    public void setLeadId(String leadId) {
-        this.leadId = leadId;
-    }
+	public String getLastUpdatedTimeStamp() {
+		return lastUpdatedTimeStamp;
+	}
 
-    public String getDealStatus() {
-        return dealStatus;
-    }
+	public void setLastUpdatedTimeStamp(String lastUpdatedTimeStamp) {
+		this.lastUpdatedTimeStamp = lastUpdatedTimeStamp;
+	}
 
-    public void setDealStatus(String dealStatus) {
-        this.dealStatus = dealStatus;
-    }
+	private String createdTimeStamp;
 
-    public List<String> getSampleDataAttachmentFiles() {
-        return sampleDataAttachmentFiles;
-    }
+	public int getDealId() {
+		return dealId;
+	}
 
-    public void setSampleDataAttachmentFiles(List<String> sampleDataAttachmentFiles) {
-        this.sampleDataAttachmentFiles = sampleDataAttachmentFiles;
-    }
+	public void setDealId(int dealId) {
+		this.dealId = dealId;
+	}
 
-    public String getFinalDataFile() {
-        return finalDataFile;
-    }
+	public int getLeadId() {
+		return leadId;
+	}
 
-    public void setFinalDataFile(String finalDataFile) {
-        this.finalDataFile = finalDataFile;
-    }
+	public void setLeadId(int leadId) {
+		this.leadId = leadId;
+	}
 
-    public Long getDealValue() {
-        return dealValue;
-    }
+	public String getDealStatus() {
+		return dealStatus;
+	}
 
-    public void setDealValue(Long dealValue) {
-        this.dealValue = dealValue;
-    }
+	public void setDealStatus(String dealStatus) {
+		this.dealStatus = dealStatus;
+	}
 
-    public Date getCreatedTimeStamp() {
-        return createdTimeStamp;
-    }
+	public String getSampleDataAttachmentFiles() {
+		return sampleDataAttachmentFiles;
+	}
 
-    public void setCreatedTimeStamp(Date createdTimeStamp) {
-        this.createdTimeStamp = createdTimeStamp;
-    }
+	public void setSampleDataAttachmentFiles(String sampleDataAttachmentFiles) {
+		this.sampleDataAttachmentFiles = sampleDataAttachmentFiles;
+	}
+
+	public String getFinalDataFile() {
+		return finalDataFile;
+	}
+
+	public void setFinalDataFile(String finalDataFile) {
+		this.finalDataFile = finalDataFile;
+	}
+
+	public Long getDealValue() {
+		return dealValue;
+	}
+
+	public void setDealValue(Long dealValue) {
+		this.dealValue = dealValue;
+	}
+
+	public String getCreatedTimeStamp() {
+		return createdTimeStamp;
+	}
+
+	public void setCreatedTimeStamp(String createdTimeStamp) {
+		this.createdTimeStamp = createdTimeStamp;
+	}
 }

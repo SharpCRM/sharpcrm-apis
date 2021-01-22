@@ -6,262 +6,259 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-
 @Entity
 public class Lead {
-    
+
 	@Id
 	@GeneratedValue
-    private int id;
-    
-    private String leadStatus;
-    
-    private String firstName;
-    
-    private String lastName;
-    
-    private String companyName;
-    
-    private String country;
-    
-    private String state;   
-    
-    private String city;
+	private int id;
 
-    
-    private String businessEmail;
-    
-    private String companyEmail;
-    
-    private String companySocialId;
-    
-    private String companyURL;
-    
-    private String alternateEmail;
-    
-    private String leadSource;
-    
-    private String phoneNumber;
-    
-    private String companyPhoneNumber;
-    
-    private String mobileNumber;
-    
-    private String sicCode;
-    
-    private String naicsCode;
-    
-    private String targetIndustry;
-    
-    private String employeeSize;
-    
-    private String revenueSize;
-    
-    private String customDataRequirement;
-    
-    private String createdTimeStamp;
-    
-    private String lastUpdatedTimeStamp;
+	private String leadStatus;
 
-    public int getId() {
-        return id;
-    }
+	private String firstName;
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	private String lastName;
 
-    public String getFirstName() {
-        return firstName;
-    }
+	private String companyName;
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	private String country;
 
-    public String getLastName() {
-        return lastName;
-    }
+	private String state;
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	private String city;
 
-    public String getCompanyName() {
-        return companyName;
-    }
+	private String businessEmail;
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
+	private String companyEmail;
 
-    public String getCountry() {
-        return country;
-    }
+	private String companySocialId;
 
-    public void setCountry(String country) {
-        this.country = country;
-    }
+	private String companyURL;
 
-    public String getState() {
-        return state;
-    }
+	private String alternateEmail;
 
-    public void setState(String state) {
-        this.state = state;
-    }
+	private String leadSource;
 
-    public String getCity() {
-        return city;
-    }
+	private String phoneNumber;
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+	private String companyPhoneNumber;
 
-    public String getBusinessEmail() {
-        return businessEmail;
-    }
+	private String mobileNumber;
 
-    public void setBusinessEmail(String businessEmail) {
-        this.businessEmail = businessEmail;
-    }
+	private String sicCode;
 
-    public String getCompanyEmail() {
-        return companyEmail;
-    }
+	private String naicsCode;
 
-    public void setCompanyEmail(String companyEmail) {
-        this.companyEmail = companyEmail;
-    }
+	private String targetIndustry;
 
-    public String getCompanySocialId() {
-        return companySocialId;
-    }
+	private String employeeSize;
 
-    public void setCompanySocialId(String companySocialId) {
-        this.companySocialId = companySocialId;
-    }
+	private String revenueSize;
 
-    public String getCompanyURL() {
-        return companyURL;
-    }
+	private String customDataRequirement;
 
-    public void setCompanyURL(String companyURL) {
-        this.companyURL = companyURL;
-    }
+	private String createdTimeStamp;
 
-    public String getAlternateEmail() {
-        return alternateEmail;
-    }
+	private String lastUpdatedTimeStamp;
 
-    public void setAlternateEmail(String alternateEmail) {
-        this.alternateEmail = alternateEmail;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public String getLeadSource() {
-        return leadSource;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public void setLeadSource(String leadSource) {
-        this.leadSource = leadSource;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public String getCompanyPhoneNumber() {
-        return companyPhoneNumber;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public void setCompanyPhoneNumber(String companyPhoneNumber) {
-        this.companyPhoneNumber = companyPhoneNumber;
-    }
+	public String getCompanyName() {
+		return companyName;
+	}
 
-    public String getMobileNumber() {
-        return mobileNumber;
-    }
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
 
-    public void setMobileNumber(String mobileNumber) {
-        this.mobileNumber = mobileNumber;
-    }
+	public String getCountry() {
+		return country;
+	}
 
-    public String getSicCode() {
-        return sicCode;
-    }
+	public void setCountry(String country) {
+		this.country = country;
+	}
 
-    public void setSicCode(String sicCode) {
-        this.sicCode = sicCode;
-    }
+	public String getState() {
+		return state;
+	}
 
-    public String getNaicsCode() {
-        return naicsCode;
-    }
+	public void setState(String state) {
+		this.state = state;
+	}
 
-    public void setNaicsCode(String naicsCode) {
-        this.naicsCode = naicsCode;
-    }
+	public String getCity() {
+		return city;
+	}
 
-    public String getTargetIndustry() {
-        return targetIndustry;
-    }
+	public void setCity(String city) {
+		this.city = city;
+	}
 
-    public void setTargetIndustry(String targetIndustry) {
-        this.targetIndustry = targetIndustry;
-    }
+	public String getBusinessEmail() {
+		return businessEmail;
+	}
 
-    public String getEmployeeSize() {
-        return employeeSize;
-    }
+	public void setBusinessEmail(String businessEmail) {
+		this.businessEmail = businessEmail;
+	}
 
-    public void setEmployeeSize(String employeeSize) {
-        this.employeeSize = employeeSize;
-    }
+	public String getCompanyEmail() {
+		return companyEmail;
+	}
 
-    public String getRevenueSize() {
-        return revenueSize;
-    }
+	public void setCompanyEmail(String companyEmail) {
+		this.companyEmail = companyEmail;
+	}
 
-    public void setRevenueSize(String revenueSize) {
-        this.revenueSize = revenueSize;
-    }
+	public String getCompanySocialId() {
+		return companySocialId;
+	}
 
-    public String getCustomDataRequirement() {
-        return customDataRequirement;
-    }
+	public void setCompanySocialId(String companySocialId) {
+		this.companySocialId = companySocialId;
+	}
 
-    public void setCustomDataRequirement(String customDataRequirement) {
-        this.customDataRequirement = customDataRequirement;
-    }
+	public String getCompanyURL() {
+		return companyURL;
+	}
 
-    public String getLeadStatus() {
-        return leadStatus;
-    }
+	public void setCompanyURL(String companyURL) {
+		this.companyURL = companyURL;
+	}
 
-    public void setLeadStatus(String leadStatus) {
-        this.leadStatus = leadStatus;
-    }
+	public String getAlternateEmail() {
+		return alternateEmail;
+	}
 
-    public String getCreatedTimeStamp() {
-        return createdTimeStamp;
-    }
+	public void setAlternateEmail(String alternateEmail) {
+		this.alternateEmail = alternateEmail;
+	}
 
-    public void setCreatedTimeStamp(String createdTimeStamp) {
-        this.createdTimeStamp = createdTimeStamp;
-    }
+	public String getLeadSource() {
+		return leadSource;
+	}
 
-    public String getLastUpdatedTimeStamp() {
-        return lastUpdatedTimeStamp;
-    }
+	public void setLeadSource(String leadSource) {
+		this.leadSource = leadSource;
+	}
 
-    public void setLastUpdatedTimeStamp(String lastUpdatedTimeStamp) {
-        this.lastUpdatedTimeStamp = lastUpdatedTimeStamp;
-    }
-   
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getCompanyPhoneNumber() {
+		return companyPhoneNumber;
+	}
+
+	public void setCompanyPhoneNumber(String companyPhoneNumber) {
+		this.companyPhoneNumber = companyPhoneNumber;
+	}
+
+	public String getMobileNumber() {
+		return mobileNumber;
+	}
+
+	public void setMobileNumber(String mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+
+	public String getSicCode() {
+		return sicCode;
+	}
+
+	public void setSicCode(String sicCode) {
+		this.sicCode = sicCode;
+	}
+
+	public String getNaicsCode() {
+		return naicsCode;
+	}
+
+	public void setNaicsCode(String naicsCode) {
+		this.naicsCode = naicsCode;
+	}
+
+	public String getTargetIndustry() {
+		return targetIndustry;
+	}
+
+	public void setTargetIndustry(String targetIndustry) {
+		this.targetIndustry = targetIndustry;
+	}
+
+	public String getEmployeeSize() {
+		return employeeSize;
+	}
+
+	public void setEmployeeSize(String employeeSize) {
+		this.employeeSize = employeeSize;
+	}
+
+	public String getRevenueSize() {
+		return revenueSize;
+	}
+
+	public void setRevenueSize(String revenueSize) {
+		this.revenueSize = revenueSize;
+	}
+
+	public String getCustomDataRequirement() {
+		return customDataRequirement;
+	}
+
+	public void setCustomDataRequirement(String customDataRequirement) {
+		this.customDataRequirement = customDataRequirement;
+	}
+
+	public String getLeadStatus() {
+		return leadStatus;
+	}
+
+	public void setLeadStatus(String leadStatus) {
+		this.leadStatus = leadStatus;
+	}
+
+	public String getCreatedTimeStamp() {
+		return createdTimeStamp;
+	}
+
+	public void setCreatedTimeStamp(String createdTimeStamp) {
+		this.createdTimeStamp = createdTimeStamp;
+	}
+
+	public String getLastUpdatedTimeStamp() {
+		return lastUpdatedTimeStamp;
+	}
+
+	public void setLastUpdatedTimeStamp(String lastUpdatedTimeStamp) {
+		this.lastUpdatedTimeStamp = lastUpdatedTimeStamp;
+	}
+
 }
-
