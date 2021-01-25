@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sharp.crm.model.Deal;
 import com.sharp.crm.model.Lead;
-
+import com.sharp.crm.model.User;
 import com.sharp.crm.services.LeadService;
 
 import com.sharp.crm.repo.LeadsRepository;
@@ -48,6 +48,12 @@ public class LeadController {
 		return leadService.getAllLeads();
 	}
 
+	
+	 @GetMapping("/leads/{id}") 
+	    public Lead getLead(@PathVariable int id){
+	        return leadService.getLeadById(id);
+	    }
+	
 	@PutMapping("/update/{id}")
 	public Lead updateLead(@RequestBody Lead lead) {
 		return leadService.updateLead(lead);
