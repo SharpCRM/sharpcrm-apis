@@ -11,13 +11,25 @@ public class SampleData {
     private String fileAttachment;
     
     private String dataType;
+<<<<<<< HEAD
+=======
+    
+<<<<<<< Updated upstream
+>>>>>>> 8e48bfe52fd70d7ec449b855a9c244c4782406bb
 
     private String sicCode;
     
     private String naicsCode;
     
     private String targetIndustry;
+<<<<<<< HEAD
   
+=======
+
+=======
+  
+>>>>>>> Stashed changes
+>>>>>>> 8e48bfe52fd70d7ec449b855a9c244c4782406bb
     private Date lastUpdatedTimeStamp;
     
     private Date createdTimeStamp;
