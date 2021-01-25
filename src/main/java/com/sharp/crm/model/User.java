@@ -1,7 +1,16 @@
 package com.sharp.crm.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class User {
     
+	@Id
+	@GeneratedValue
+	private int userId;
+	
     private String firstName;
     private String lastName;
     
@@ -11,7 +20,17 @@ public class User {
     
     private String roleName;
     
-    public String getFirstName() {
+   
+    
+    public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public String getFirstName() {
         return firstName;
     }
 
@@ -51,4 +70,6 @@ public class User {
         this.roleName = roleName;
     }
 
+	
+    
 }

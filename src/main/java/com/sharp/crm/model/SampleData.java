@@ -11,14 +11,13 @@ public class SampleData {
     private String fileAttachment;
     
     private String dataType;
-    
 
     private String sicCode;
     
     private String naicsCode;
     
     private String targetIndustry;
-
+  
     private Date lastUpdatedTimeStamp;
     
     private Date createdTimeStamp;

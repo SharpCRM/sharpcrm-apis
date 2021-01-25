@@ -1,27 +1,32 @@
 package com.sharp.crm.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sharp.crm.model.Deal;
 import com.sharp.crm.model.Lead;
-import com.sharp.crm.model.TestId;
-import com.sharp.crm.repo.LeadsRepository;
+
 import com.sharp.crm.services.LeadService;
 
-//@CrossOrigin(origins = "http://localhost:3000")
+import com.sharp.crm.repo.LeadsRepository;
+
 @RestController
 @RequestMapping("/api")
 public class LeadController {
@@ -42,8 +47,14 @@ public class LeadController {
 	public List<Lead> getLeads() {
 		return leadService.getAllLeads();
 	}
+	
+	 
+    @GetMapping("/lead/{id}") 
+    public Lead getLead(@PathVariable int id){
+        return leadService.getLeadById(id);
+    }
 
-	@PutMapping("/update")
+	@PutMapping("/update/{id}")
 	public Lead updateLead(@RequestBody Lead lead) {
 		return leadService.updateLead(lead);
 	}
@@ -59,4 +70,8 @@ public class LeadController {
 		return leadService.convertLead(newDeal);
 
 	}
+   
+    
+   
+
 }

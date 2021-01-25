@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sharp.crm.model.Comments;
+import com.sharp.crm.model.Deal;
 import com.sharp.crm.services.CommentsService;
 
 @RestController
@@ -39,10 +40,9 @@ public class CommentsController {
 	}
 	
 
-	@DeleteMapping("/deal/{id}")
-	public String deleteProduct(@PathVariable int id) {
-		return commentsService.deleteComment(id);
-	}
-	
+	 @GetMapping("/comments/{id}") 
+	    public Comments getComment(@PathVariable int id){
+	        return commentsService.getCommentById(id);
+	    }
 
 }

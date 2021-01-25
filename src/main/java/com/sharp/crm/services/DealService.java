@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sharp.crm.model.Deal;
+import com.sharp.crm.model.Lead;
 import com.sharp.crm.repo.DealsRepository;
 
 @Service
@@ -28,4 +29,11 @@ public class DealService {
 		return "deleted successfully" + id;
 	}
 
+	public Deal getDealById(int id) {
+		// TODO Auto-generated method stub
+		return dealsRepository.findById(id).orElse(null); 
+		  
+	}
+
+	
 }

@@ -24,9 +24,9 @@ public class CommentsService {
 		return commentsRepository.findAll();
 	}
 
-	public String deleteComment(int id) {
+	public Comments getCommentById(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return commentsRepository.findById(id).orElse(null);
 	}
 
 }

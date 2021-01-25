@@ -13,40 +13,44 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sharp.crm.model.Deal;
 import com.sharp.crm.model.Lead;
-import com.sharp.crm.services.DealService;
+import com.sharp.crm.model.User;
+import com.sharp.crm.services.UserService;
 
 @RestController
 @RequestMapping("/api")
-public class DealController {
-
+public class UserController {
+	
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
-
+	
 	@Autowired
-	DealService dealService;
-
-	@PostMapping("/addDeals")
-	public Deal save(@RequestBody Deal deal) {
-		log.info("Saving deals details in the database.");
-		return dealService.saveDead(deal);
-
-	}
-
-	@GetMapping("/deals")
-	public List<Deal> getDeals() {
-		return dealService.getAllDeals();
+	UserService userService;
+	
+	
+	@PostMapping("/addUser")
+	public User save(@RequestBody User user) {
+		log.info("Saving  user in the database.");
+		return userService.saveUser(user);
 
 	}
 	
-	 @GetMapping("/deals/{id}") 
-	    public Deal getDeal(@PathVariable int id){
-	        return dealService.getDealById(id);
-	    }
 
-	@DeleteMapping("/deal/{id}")
-	public String deleteProduct(@PathVariable int id) {
-		return dealService.deleteDeal(id);
+	@GetMapping("/users")
+	public List<User> getUsers() {
+		return userService.getAllUsers();
 	}
+	
+	
+	 
+    @GetMapping("/users/{id}") 
+    public User getuser(@PathVariable int id){
+        return userService.getUserById(id);
+    }
+	
+	@DeleteMapping("/users/{id}")
+	public String deleteUser(@PathVariable int id) {
+		return userService.deleteuser(id);
+	}
+	
 
 }
