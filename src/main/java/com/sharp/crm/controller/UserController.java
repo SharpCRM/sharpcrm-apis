@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sharp.crm.model.Lead;
 import com.sharp.crm.model.User;
 import com.sharp.crm.services.UserService;
 
@@ -47,7 +46,7 @@ public class UserController {
         return userService.getUserById(id);
     }
 	
-	@DeleteMapping("/users/{id}")
+	@DeleteMapping("/deleteusers/{id}")
 	public String deleteUser(@PathVariable int id) {
 		return userService.deleteuser(id);
 	}

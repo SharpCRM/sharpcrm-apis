@@ -21,21 +21,12 @@
 	 <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> 8e48bfe52fd70d7ec449b855a9c244c4782406bb
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-<<<<<<< HEAD
 
-=======
->>>>>>> Stashed changes
->>>>>>> 8e48bfe52fd70d7ec449b855a9c244c4782406bb
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
@@ -44,59 +35,25 @@
            <groupId>org.springframework.boot</groupId>
            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-<<<<<<< HEAD
 
-		<!-- <dependency>
-
-		<dependency>
-
-=======
-		
-<<<<<<< Updated upstream
-		<!-- <dependency>
-=======
-		<dependency>
->>>>>>> Stashed changes
->>>>>>> 8e48bfe52fd70d7ec449b855a9c244c4782406bb
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-            <version>5.1.25</version>         
-<<<<<<< Updated upstream
-        </dependency> -->
+        
         <dependency>
         <groupId>org.xerial</groupId>
         <artifactId>sqlite-jdbc</artifactId>
         <version>3.28.0</version>
         </dependency>
-<<<<<<< HEAD
-=======
-=======
-        </dependency>
->>>>>>> 8e48bfe52fd70d7ec449b855a9c244c4782406bb
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-rest</artifactId>
         </dependency>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> Stashed changes
->>>>>>> 8e48bfe52fd70d7ec449b855a9c244c4782406bb
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-<<<<<<< HEAD
 
-=======
-<<<<<<< Updated upstream
-        
-=======
->>>>>>> Stashed changes
->>>>>>> 8e48bfe52fd70d7ec449b855a9c244c4782406bb
     </dependencies>
 
     <build>

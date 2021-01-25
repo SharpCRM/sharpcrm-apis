@@ -7,12 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.sharp.crm.model.Deal;
 import com.sharp.crm.model.Lead;
-<<<<<<< HEAD
 
 
 import com.sharp.crm.repo.DealsRepository;
-=======
->>>>>>> 8e48bfe52fd70d7ec449b855a9c244c4782406bb
+
 import com.sharp.crm.repo.LeadsRepository;
 
 @Service
