@@ -24,9 +24,9 @@ public class CommentsService {
 		return commentsRepository.findAll();
 	}
 
-	public Comments getCommentById(int id) {
+	public List<Comments> getAllCommentsById(int id) {
 		// TODO Auto-generated method stub
-		return commentsRepository.findById(id).orElse(null);
+		return commentsRepository.findByReferenceId(id);
 	}
 
 }

@@ -1,10 +1,13 @@
 package com.sharp.crm.model;
 
+import org.springframework.lang.Nullable;
+
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Comments {
@@ -14,7 +17,8 @@ public class Comments {
 	@GeneratedValue
     private int commentId;
   
-    private int id;
+
+    private int referenceId;
     
     private String comment;
     
@@ -37,12 +41,12 @@ public class Comments {
         this.comment = comment;
     }
 
-    public int getId() {
-        return id;
+    public int getReferenceId() {
+        return this.referenceId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setReferenceId(int id) {
+        this.referenceId = id;
     }
 
     public String getTimeStamp() {

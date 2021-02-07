@@ -6,7 +6,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +18,7 @@ import org.springframework.http.ResponseEntity;
 
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sharp.crm.model.Deal;
@@ -27,6 +28,7 @@ import com.sharp.crm.services.LeadService;
 
 import com.sharp.crm.repo.LeadsRepository;
 
+//@CrossOrigin(origins = "http://localhost:3002")
 @RestController
 @RequestMapping("/api")
 public class LeadController {
@@ -40,7 +42,6 @@ public class LeadController {
 	public Lead save(@RequestBody Lead lead) {
 		log.info("Saving lead details in the database.");
 		return leadService.saveLead(lead);
-
 	}
 
 	@GetMapping("/leads")

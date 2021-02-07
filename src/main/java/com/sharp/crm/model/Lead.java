@@ -1,10 +1,9 @@
 package com.sharp.crm.model;
 
 import java.util.Date;
+import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Lead {
@@ -60,6 +59,10 @@ public class Lead {
 	private String createdTimeStamp;
 
 	private String lastUpdatedTimeStamp;
+
+	@OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
+	@JoinColumn(name="referenceId")
+	private List<Comments> commentsList;
 
 	public int getId() {
 		return id;
@@ -259,6 +262,13 @@ public class Lead {
 
 	public void setLastUpdatedTimeStamp(String lastUpdatedTimeStamp) {
 		this.lastUpdatedTimeStamp = lastUpdatedTimeStamp;
+	}
+	public List<Comments> getCommentsList() {
+		return commentsList;
+	}
+
+	public void setCommentsList(List<Comments> commentsList) {
+		this.commentsList = commentsList;
 	}
 
 }
