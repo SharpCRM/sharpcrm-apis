@@ -2,8 +2,12 @@ package com.sharp.crm.model;
 
 import org.springframework.lang.Nullable;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
+
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,11 +21,12 @@ public class Comments {
 	@GeneratedValue
     private int commentId;
   
-
     private int referenceId;
     
     private String comment;
     
+    @JsonFormat(pattern= "yyyy-MM-dd'T'HH:mm:ss", shape = Shape.STRING)
+	@Column(name="date_created")
     private String timeStamp;
     
     public int getCommentId() {

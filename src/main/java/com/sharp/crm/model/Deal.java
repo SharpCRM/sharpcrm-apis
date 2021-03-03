@@ -3,9 +3,16 @@ package com.sharp.crm.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 
 @Entity
 public class Deal {
@@ -23,8 +30,18 @@ public class Deal {
 	private String finalDataFile;
 
 	private Long dealValue;
+	
+	@JsonFormat(pattern= "yyyy-MM-dd'T'HH:mm:ss", shape = Shape.STRING)
+	@Column(name="date_created")
+	private String createdTimeStamp;
 
+	@JsonFormat(pattern= "yyyy-MM-dd'T'HH:mm:ss", shape = Shape.STRING)
+	@Column(name="date_updated")
 	private String lastUpdatedTimeStamp;
+	
+	@OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
+	@JoinColumn(name="referenceId")
+	private List<Comments> commentsList;
 
 	public String getLastUpdatedTimeStamp() {
 		return lastUpdatedTimeStamp;
@@ -33,8 +50,6 @@ public class Deal {
 	public void setLastUpdatedTimeStamp(String lastUpdatedTimeStamp) {
 		this.lastUpdatedTimeStamp = lastUpdatedTimeStamp;
 	}
-
-	private String createdTimeStamp;
 
 	public int getDealId() {
 		return dealId;
@@ -91,4 +106,15 @@ public class Deal {
 	public void setCreatedTimeStamp(String createdTimeStamp) {
 		this.createdTimeStamp = createdTimeStamp;
 	}
+
+	public List<Comments> getCommentsList() {
+		return commentsList;
+	}
+
+	public void setCommentsList(List<Comments> commentsList) {
+		this.commentsList = commentsList;
+	}
+	
+	
+	
 }

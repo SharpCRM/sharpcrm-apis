@@ -5,6 +5,15 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
+
 @Entity
 public class Lead {
 
@@ -56,8 +65,12 @@ public class Lead {
 
 	private String customDataRequirement;
 
+	@JsonFormat(pattern= "yyyy-MM-dd'T'HH:mm:ss", shape = Shape.STRING)
+	@Column(name="date_created")
 	private String createdTimeStamp;
 
+	@JsonFormat(pattern= "yyyy-MM-dd'T'HH:mm:ss", shape = Shape.STRING)
+	@Column(name="date_updated")
 	private String lastUpdatedTimeStamp;
 
 	@OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)

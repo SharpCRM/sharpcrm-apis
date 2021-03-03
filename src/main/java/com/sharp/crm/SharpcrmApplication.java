@@ -4,14 +4,25 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import org.springframework.stereotype.Component;
+
+import com.sharp.crm.model.FileStorageProperties;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+
 @SpringBootApplication
+
+@EnableConfigurationProperties({
+    FileStorageProperties.class
+})
+
 public class SharpcrmApplication {
 
     
